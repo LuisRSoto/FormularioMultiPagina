@@ -1,0 +1,36 @@
+{
+  "pacientes": [
+    {
+      "datosPersonales": {
+        "nombre": "Juan",
+        "apellido": "Pérez",
+        "edad": 35
+      },
+      "familiares": [
+        {
+          "nombre": "Ana",
+          "parentesco": "Esposa",
+          "edad": 32
+        },
+        {
+          "nombre": "Miguel",
+          "parentesco": "Hijo",
+          "edad": 5
+        }
+      ],
+      "condicionesPreexistentes": [
+        {
+          "enfermedad": "Diabetes",
+          "tiempo": "3 años"
+        }
+      ],
+      "internamientos": [
+        {
+          "fecha": "2022-03-15",
+          "centroMedico": "Hospital Central",
+          "diagnostico": "Neumonía"
+        }
+      ]
+    }
+  ]
+}

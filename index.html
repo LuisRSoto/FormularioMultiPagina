@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Multi-Página</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <form id="multiPageForm">
+        <fieldset id="page1">
+            <legend>Datos Personales</legend>
+            <label for="name">Nombre:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="lastName">Apellido:</label><br>
+            <input type="text" id="lastName" name="lastName"><br>
+            <label for="age">Edad:</label><br>
+            <input type="number" id="age" name="age"><br>
+            <button type="button" onclick="nextPage()">Siguiente</button>
+        </fieldset>
+
+        <fieldset id="page2">
+            <legend>Familiares</legend>
+            <label for="relativeName">Nombre del familiar:</label><br>
+            <input type="text" id="relativeName" name="relativeName"><br>
+            <label for="relationship">Parentesco:</label><br>
+            <input type="text" id="relationship" name="relationship"><br>
+            <label for="relativeAge">Edad:</label><br>
+            <input type="number" id="relativeAge" name="relativeAge"><br>
+            <button type="button" onclick="addRelative()">Agregar Familiar</button>
+            <button type="button" onclick="nextPage()">Siguiente</button>
+        </fieldset>
+
+        <fieldset id="page3">
+            <legend>Condiciones Pre-Existentes</legend>
+            <label for="condition">Enfermedad:</label><br>
+            <input type="text" id="condition" name="condition"><br>
+            <label for="duration">Tiempo con la Enfermedad:</label><br>
+            <input type="number" id="duration" name="duration">
+            <select id="durationUnit">
+                <option value="días">Días</option>
+                <option value="meses">Meses</option>
+                <option value="años">Años</option>
+            </select><br>
+            <button type="button" onclick="addCondition()">Agregar Condición</button>
+            <button type="button" onclick="nextPage()">Siguiente</button>
+        </fieldset>
+
+        <fieldset id="page4">
+            <legend>Internamientos Realizados</legend>
+            <label for="date">Fecha:</label><br>
+            <input type="date" id="date" name="date"><br>
+            <label for="medicalCenter">Centro Médico:</label><br>
+            <input type="text" id="medicalCenter" name="medicalCenter"><br>
+            <label for="diagnosis">Diagnóstico:</label><br>
+            <input type="text" id="diagnosis" name="diagnosis"><br>
+            <button type="button" onclick="addInternment()">Agregar Internamiento</button>
+            <button type="button" onclick="nextPage()">Siguiente</button>
+        </fieldset>
+
+        <fieldset id="page5">
+            <legend>Resumen</legend>
+            <div id="summary"></div>
+            <button type="button" onclick="showData()">Mostrar Datos</button>
+            <button type="button" onclick="editData()">Editar Datos</button>
+        </fieldset>
+    </form>
+    <script src="js/script.js"></script>
+</body>
+</html>
